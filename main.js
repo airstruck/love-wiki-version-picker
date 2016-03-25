@@ -221,31 +221,31 @@ function versionpicker() {
 	}
 
 	function injectVersionTags () {
-		var versions = {
-			//"0.10.1": "Super Toast",
-			"0.10.0": "Super Toast",
-			"0.9.2": "Baby Inspector",
-			"0.9.1": "Baby Inspector",
-			"0.9.0": "Baby Inspector",
-			"0.8.0": "Rubber Piggy",
-			"0.7.2": "Game Slave",
-			"0.7.1": "Game Slave",
-			"0.7.0": "Game Slave",
-			"0.6.2": "Jiggly Juice",
-			"0.6.1": "Jiggly Juice",
-			"0.6.0": "Jiggly Juice",
-			"0.5.0": "Salted Nuts",
-			"0.4.0": "Taco Beam",
-			"0.3.2": "Lemony Fresh",
-			"0.3.1": "Space Meat",
-			"0.3.0": "Mutant Vermin",
-			"0.2.1": "Impending Doom",
-			"0.2.0": "Mini Moose",
-			"0.1.1": "Santa Power"
-		}
+		var versions = [
+			//{"version": "0.10.1", "codename": "Super Toast"},
+			{"version": "0.10.0", "codename": "Super Toast"},
+			{"version": "0.9.2", "codename": "Baby Inspector"},
+			{"version": "0.9.1", "codename": "Baby Inspector"},
+			{"version": "0.9.0", "codename": "Baby Inspector"},
+			{"version": "0.8.0", "codename": "Rubber Piggy"},
+			{"version": "0.7.2", "codename": "Game Slave"},
+			{"version": "0.7.1", "codename": "Game Slave"},
+			{"version": "0.7.0", "codename": "Game Slave"},
+			{"version": "0.6.2", "codename": "Jiggly Juice"},
+			{"version": "0.6.1", "codename": "Jiggly Juice"},
+			{"version": "0.6.0", "codename": "Jiggly Juice"},
+			{"version": "0.5.0", "codename": "Salted Nuts"},
+			{"version": "0.4.0", "codename": "Taco Beam"},
+			{"version": "0.3.2", "codename": "Lemony Fresh"},
+			{"version": "0.3.1", "codename": "Space Meat"},
+			{"version": "0.3.0", "codename": "Mutant Vermin"},
+			{"version": "0.2.1", "codename": "Impending Doom"},
+			{"version": "0.2.0", "codename": "Mini Moose"},
+			{"version": "0.1.1", "codename": "Santa Power"}
+		]
 
-		for (var version in versions) {
-			injectVersionTag(version, versions[version]);
+		for (var i in versions) {
+			injectVersionTag(versions[i].version, versions[i].codename);
 		}
 	}
 
