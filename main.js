@@ -244,7 +244,7 @@ function versionpicker() {
 			{"version": "0.1.1", "codename": "Santa Power"}
 		]
 
-		for (var i in versions) {
+		for (var i = 0; i < versions.length; i++) {
 			injectVersionTag(versions[i].version, versions[i].codename);
 		}
 	}
