@@ -1,9 +1,5 @@
 // Source on github: https://github.com/airstruck/love-wiki-version-picker
 function versionpicker() {
-	// Test it on https://love2d.org/wiki/love.thread.newThread
-	// TODO: dl notes: https://love2d.org/wiki/GraphicsFeature
-	// TODO: box notes: https://love2d.org/wiki/love.event.push
-
 	var picker = document.createElement('select');
 
 	picker.onchange = function () {
