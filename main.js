@@ -93,6 +93,7 @@ function versionpicker() {
 	var withSections = QueryIterator('*[data-love-filterable]');
 	var withAdded = QueryIterator('*[data-love-version-added]');
 	var withRemoved = QueryIterator('*[data-love-version-removed]');
+	var withAddedRemoved = QueryIterator('*[data-love-version-added][data-love-version-removed]');
 	var withNotes = QueryIterator('*[data-love-version-note]');
 
 	function hideNotes () {
@@ -180,6 +181,13 @@ function versionpicker() {
 				section.style.display = 'none';
 			}
 		});
+		withAddedRemoved(function (section) {
+			var added = section.getAttribute('data-love-version-added');
+			var removed = section.getAttribute('data-love-version-removed');
+			if (compareVersions(added, removed) && compareVersions(installed, added)) {
+				section.style.display = null;
+			}
+		});
 	}
 
 	function filterAll (hideOrShowNotes) {
@@ -190,6 +198,13 @@ function versionpicker() {
 	function filterLatest () {
 		filterAll(hideNotes);
 		withRemoved(function (section) { section.style.display = 'none' });
+		withAddedRemoved(function (section) {
+			var added = section.getAttribute('data-love-version-added');
+			var removed = section.getAttribute('data-love-version-removed');
+			if (compareVersions(added, removed)) {
+				section.style.display = null;
+			}
+		});
 	}
 
 	function applyFilter (value) {
