@@ -150,6 +150,9 @@ function versionpicker() {
 		if (a.length == 2) {
 			a[2] = 0;
 		}
+		if (b.length == 2) {
+			b[2] = 0;
+		}
 
 		if (a[0] > b[0]) return true;
 		if (a[0] < b[0]) return false;
@@ -233,6 +236,7 @@ function versionpicker() {
 
 	function injectVersionTags () {
 		var versions = [
+			{"version": "11.0", "codename": "Mysterious Mysteries"},
 			{"version": "0.10.2", "codename": "Super Toast"},
 			{"version": "0.10.1", "codename": "Super Toast"},
 			{"version": "0.10.0", "codename": "Super Toast"},
