@@ -224,8 +224,8 @@ function versionpicker() {
 
 		picker.style.position = 'absolute';
 		picker.style.right = 0;
-		picker.style.height = target.parentNode.offsetHeight - 8 + 'px';
-		picker.style.margin = '4px';
+		picker.style.margin = '0.25rem';
+		picker.style.padding = '0.15rem';
 
 		target.parentNode.insertBefore(picker, target);
 	}
